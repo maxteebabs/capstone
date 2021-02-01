@@ -23,7 +23,7 @@ class DBModel(db.Model):
         try:
             db.session.add(self)
             db.session.commit()
-        except:
+        except BaseException:
             print(sys.exc_info())
             db.session.rollback()
             abort(400)
@@ -31,7 +31,7 @@ class DBModel(db.Model):
     def update(self):
         try:
             db.session.commit()
-        except:
+        except BaseException:
             print(sys.exc_info())
             db.session.rollback()
             abort(400)
@@ -40,7 +40,7 @@ class DBModel(db.Model):
         try:
             db.session.delete(self)
             db.session.commit()
-        except:
+        except BaseException:
             print(sys.exc_info())
             db.session.rollback()
             abort(400)

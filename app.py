@@ -8,7 +8,7 @@ from auth.auth import requires_auth, AuthError
 
 
 def create_app(test_config=None):
-	# create and configure the app
+    # create and configure the app
     app = Flask(__name__)
     app.config.from_object('config')
     CORS(app)
@@ -175,6 +175,7 @@ def create_app(test_config=None):
         }), ex.status_code
 
     return app
+
 
 app = create_app()
 

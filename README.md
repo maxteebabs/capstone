@@ -2,8 +2,13 @@
 ----
 
 ## INTRODUCTION
-The Casting Agency models a company that is responsible for creating movies and managing and assigning actors to those movies. This is a full fledged API project. The motivation behind this project is as a result of my passion 
-in the movie industry. There will be incremental changes to this project from time to time.
+The Capstone project is a project that keeps records of actors and movies in the industry. Actors and movies
+can be managed effectively. It also lets users keep track of the release dates of movies.
+
+
+## MOTIVATION
+I want to contribute to the open source community. Hence, the reason for this project. This will serve as 
+not just a learning tool but a great resource for beginners and intermediate developers.
 
 ### HEROKU URL 
 This application is hosted on heroku and a link is provided here. 
