@@ -44,30 +44,30 @@ python app.py
 python -m unittest discover
 ```
 
-#### ROLES
+### ROLES
 
-#####  CASTING ASSISTANT
+####  CASTING ASSISTANT
 * The casting assistant can only view actors and movies
 
-##### CASTING DIRECTOR
+#### CASTING DIRECTOR
 * This role has all the permissions that the CASTING ASSISTANT has
 * It also has permissions to add or delete an actor from the database
 * It has permissions to modify actors or movies
 
-##### EXECUTIVE PRODUCER
+#### EXECUTIVE PRODUCER
 * This role has all the permissions that the CASTING DIRECTOR has
 * It can also add or delete a movie from the database
 
-#### Permissions
+### Permissions
 The permissions for this application includes the following:
 * get:actors - access to retrieve all actors
-* post:actor - access to create an actor
-* patch:actor - access to update an actor
-* delete:actor - access to delete an actor
+* post:actors - access to create an actor
+* patch:actors - access to update an actor
+* delete:actors - access to delete an actor
 * get:movies - access to retrieve all movies
-* post:movie - access to create a movie
-* patch:movie - access to update a movie
-* delete:movie - access to delete a movie
+* post:movies - access to create a movie
+* patch:movies - access to update a movie
+* delete:movies - access to delete a movie
 
 
 ## DATA MODELLING
