@@ -2,7 +2,8 @@
 ----
 
 ## INTRODUCTION
-The Casting Agency models a company that is responsible for creating movies and managing and assigning actors to those movies.
+The Casting Agency models a company that is responsible for creating movies and managing and assigning actors to those movies. This is a full fledged API project. The motivation behind this project is as a result of my passion 
+in the movie industry. There will be incremental changes to this project from time to time.
 
 ### HEROKU URL 
 This application is hosted on heroku and a link is provided here. 
