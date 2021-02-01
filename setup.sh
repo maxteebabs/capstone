@@ -1,5 +1,5 @@
 
-export DATABASE_URI='postgresql://hqodtkjwqypgwz:1fda2dacccd0c3ba8a66f120cf28f634fd993c4fe404fbc4435a7baeb149d753@ec2-52-4-177-4.compute-1.amazonaws.com:5432/d81cm11p41pmq3'
+export DATABASE_URL='postgresql://hqodtkjwqypgwz:1fda2dacccd0c3ba8a66f120cf28f634fd993c4fe404fbc4435a7baeb149d753@ec2-52-4-177-4.compute-1.amazonaws.com:5432/d81cm11p41pmq3'
 export AUTH0_DOMAIN='dev-4dkx4uqj.us.auth0.com'
 export ALGORITHMS='RS256'
 export API_AUDIENCE='https://capstone/'
