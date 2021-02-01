@@ -1,9 +1,9 @@
 import unittest
 import json
+import os
 from flask_sqlalchemy import SQLAlchemy
 from app import create_app
 from models import setup_db, Movie
-import config
 
 
 class CapstoneMovieCase(unittest.TestCase):
@@ -14,7 +14,7 @@ class CapstoneMovieCase(unittest.TestCase):
         self.client = self.app.test_client
 
         # lets use the executive director token because it has all permissions
-        token = config.EXECUTIVE_DIRECTOR_TOKEN
+        token = os.environ.get('EXECUTIVE')
         self.headers = {"Authorization": f"Bearer {token}"}
 
         database_name = "capstone_test"
