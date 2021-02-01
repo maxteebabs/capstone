@@ -5,6 +5,7 @@ from app import create_app
 from models import setup_db, Actor, Movie
 import config
 
+
 class CapstoneRolesCase(unittest.TestCase):
     """This test represent the capstone project"""
 
@@ -38,7 +39,7 @@ class CapstoneRolesCase(unittest.TestCase):
         result = json.loads(resp.data)
         self.assertEqual(resp.status_code, 200)
         self.assertTrue(result['success'])
-    
+
     def test_casting_assistant_can_view_movies(self):
         token = config.CASTING_ASSISTANT_TOKEN
         headers = {"Authorization": f"Bearer {token}"}
@@ -46,7 +47,7 @@ class CapstoneRolesCase(unittest.TestCase):
         result = json.loads(resp.data)
         self.assertEqual(resp.status_code, 200)
         self.assertTrue(result['success'])
-    
+
     def test_casting_assistant_cannot_delete_an_actor(self):
         token = config.CASTING_ASSISTANT_TOKEN
         headers = {"Authorization": f"Bearer {token}"}
@@ -84,7 +85,7 @@ class CapstoneRolesCase(unittest.TestCase):
         result = json.loads(resp.data)
         self.assertEqual(resp.status_code, 401)
         self.assertFalse(result['success'])
-    
+
     def test_executive_director_can_update_a_movie(self):
         token = config.EXECUTIVE_DIRECTOR_TOKEN
         headers = {"Authorization": f"Bearer {token}"}

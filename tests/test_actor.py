@@ -6,6 +6,7 @@ from app import create_app
 from models import setup_db, Actor
 import config
 
+
 class CapstoneActorCase(unittest.TestCase):
     """This test represent the capstone project"""
 
@@ -55,7 +56,7 @@ class CapstoneActorCase(unittest.TestCase):
         self.assertEqual(resp.status_code, 200)
         self.assertTrue(result['success'])
         self.assertTrue(actor)
-    
+
     def test_create_actor_bad_request(self):
         resp = self.client().post('/actors', json={
             "name": "Celine Dion",
@@ -92,8 +93,7 @@ class CapstoneActorCase(unittest.TestCase):
         self.assertEqual(resp.status_code, 404)
         self.assertFalse(result['success'])
         self.assertEqual(result['message'], "Not found")
-    
-    
+
     def test_delete_actor(self):
         model = Actor(name="Badmus Ope", age=25, gender="male")
         model.insert()

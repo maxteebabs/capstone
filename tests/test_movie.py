@@ -5,6 +5,7 @@ from app import create_app
 from models import setup_db, Movie
 import config
 
+
 class CapstoneMovieCase(unittest.TestCase):
     """This test represent the capstone Movie module"""
 
@@ -51,7 +52,7 @@ class CapstoneMovieCase(unittest.TestCase):
         self.assertEqual(resp.status_code, 200)
         self.assertTrue(result['success'])
         self.assertTrue(movie)
-    
+
     def test_create_movie_bad_request(self):
         resp = self.client().post('/movies', json={
             "title": "Spartacus",
@@ -62,7 +63,8 @@ class CapstoneMovieCase(unittest.TestCase):
         self.assertEqual(result['message'], 'Bad Request')
 
     def test_update_movie(self):
-        model = Movie(title="Alita the battle angel", release_date="2018-05-22")
+        model = Movie(
+            title="Alita the battle angel", release_date="2018-05-22")
         model.insert()
         movie_title = model.title
         resp = self.client().patch(f'/movies/{model.id}', json={

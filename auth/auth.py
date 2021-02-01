@@ -11,6 +11,8 @@ API_AUDIENCE = config.API_AUDIENCE
 
 
 """Making a customized Error Exception"""
+
+
 class AuthError(Exception):
     def __init__(self, error, status_code):
         self.error = error
@@ -51,6 +53,7 @@ def check_permissions(permission, payload):
         }, 401)
     return True
 
+
 def verify_decode_jwt(token):
     # GET THE PUBLIC KEY FROM AUTH0
     jsonurl = urlopen(f'https://{AUTH0_DOMAIN}/.well-known/jwks.json')
@@ -64,7 +67,7 @@ def verify_decode_jwt(token):
             'code': 'token_invalid',
             'description': 'Invalid Token.'
         }, 401)
-    
+
     # CHOOSE OUR KEY
     rsa_key = {}
     if 'kid' not in unverified_header:
