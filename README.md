@@ -82,12 +82,15 @@ Two tables are created: actors and movies
 ## API Endpoints
 ### GET '/actors'
 * fetches a collection of all actors in the database
+
 ```
 Sample curl request: curl --location --request GET 'https://remmy-capstone-app.herokuapp.com/actors' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFTVkY1OTJ5RS14eGFJcTdLdGJtQyJ9.eyJpc3MiOiJodHRwczovL2Rldi00ZGt4NHVxai51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAxNjMzZThmZmNiZTIwMDZhODkyMTg1IiwiYXVkIjoiaHR0cHM6Ly9jYXBzdG9uZS8iLCJpYXQiOjE2MTIxMzU3OTAsImV4cCI6MTYxMjIyMjE5MCwiYXpwIjoiZEQzaGlZZ1d3WmhXVnBlb3lQRzlYSENtdVNjRmRkbDciLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.oEjGJXWS8PsygU4rtZQnt_Rkss56fwPHC-1T6ZPorBq_-stkdAuuw_qpQMaXMbpbGYZBTACEX6zoOFvJJie_UFiUB6jNZHWgjQOPgZS149G-FTqusLJQS_fwmYtPwKKOaoGpw8SLNRFUoh4DojLEdCAOqqaJGLDVZ8ZSsCQR4fx9JE8yLnUj0daAzcURscH2H-hRTsD4TyUFJ1qbTlggohKxk9jR3sFcB-UsAUWnTNe5dssQ7V4do3ObnrY8FGe2yI5Y9XU5fC98F7XsE9nOGJwC_qT32eu43zJGgfx0lGvsUKESpiyYQBGyXr1gfCqP5xYGtkbGi6obbhUo_e47PQ' \
 --header 'Content-Type: application/json'
 ```
+
 Sample Response:
+
 ```
 {
     "actors": [
@@ -101,8 +104,10 @@ Sample Response:
     "success": true
 }
 ```
+
 ### POST '/actors'
 * create an actor in the database
+
 ```
 Sample curl request: curl --location --request POST 'https://remmy-capstone-app.herokuapp.com/actors' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFTVkY1OTJ5RS14eGFJcTdLdGJtQyJ9.eyJpc3MiOiJodHRwczovL2Rldi00ZGt4NHVxai51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAxNjMzZThmZmNiZTIwMDZhODkyMTg1IiwiYXVkIjoiaHR0cHM6Ly9jYXBzdG9uZS8iLCJpYXQiOjE2MTIxMzU3OTAsImV4cCI6MTYxMjIyMjE5MCwiYXpwIjoiZEQzaGlZZ1d3WmhXVnBlb3lQRzlYSENtdVNjRmRkbDciLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.oEjGJXWS8PsygU4rtZQnt_Rkss56fwPHC-1T6ZPorBq_-stkdAuuw_qpQMaXMbpbGYZBTACEX6zoOFvJJie_UFiUB6jNZHWgjQOPgZS149G-FTqusLJQS_fwmYtPwKKOaoGpw8SLNRFUoh4DojLEdCAOqqaJGLDVZ8ZSsCQR4fx9JE8yLnUj0daAzcURscH2H-hRTsD4TyUFJ1qbTlggohKxk9jR3sFcB-UsAUWnTNe5dssQ7V4do3ObnrY8FGe2yI5Y9XU5fC98F7XsE9nOGJwC_qT32eu43zJGgfx0lGvsUKESpiyYQBGyXr1gfCqP5xYGtkbGi6obbhUo_e47PQ' \
@@ -113,7 +118,9 @@ Sample curl request: curl --location --request POST 'https://remmy-capstone-app.
     "gender": "male",
 }'
 ```
+
 Sample Response:
+
 ```
 {
     "actor": {
@@ -126,9 +133,10 @@ Sample Response:
 }
 ```
 
-```
+
 ### PATCH '/actors/1'
 * update an actor
+
 ```
 Sample curl request: curl --location --request PATCH 'https://remmy-capstone-app.herokuapp.com/actors/1' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFTVkY1OTJ5RS14eGFJcTdLdGJtQyJ9.eyJpc3MiOiJodHRwczovL2Rldi00ZGt4NHVxai51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAxNjMzZThmZmNiZTIwMDZhODkyMTg1IiwiYXVkIjoiaHR0cHM6Ly9jYXBzdG9uZS8iLCJpYXQiOjE2MTIxMzU3OTAsImV4cCI6MTYxMjIyMjE5MCwiYXpwIjoiZEQzaGlZZ1d3WmhXVnBlb3lQRzlYSENtdVNjRmRkbDciLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.oEjGJXWS8PsygU4rtZQnt_Rkss56fwPHC-1T6ZPorBq_-stkdAuuw_qpQMaXMbpbGYZBTACEX6zoOFvJJie_UFiUB6jNZHWgjQOPgZS149G-FTqusLJQS_fwmYtPwKKOaoGpw8SLNRFUoh4DojLEdCAOqqaJGLDVZ8ZSsCQR4fx9JE8yLnUj0daAzcURscH2H-hRTsD4TyUFJ1qbTlggohKxk9jR3sFcB-UsAUWnTNe5dssQ7V4do3ObnrY8FGe2yI5Y9XU5fC98F7XsE9nOGJwC_qT32eu43zJGgfx0lGvsUKESpiyYQBGyXr1gfCqP5xYGtkbGi6obbhUo_e47PQ' \
@@ -139,7 +147,9 @@ Sample curl request: curl --location --request PATCH 'https://remmy-capstone-app
     "gender": "male",
 }'
 ```
+
 Sample Response:
+
 ```
 {
     "actor": {
@@ -152,15 +162,16 @@ Sample Response:
 }
 ```
 
-
-```
 ### Delete '/actors/1'
 * Delete an actor
+
 ```
 curl --location --request DELETE 'https://remmy-capstone-app.herokuapp.com/actors/1' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFTVkY1OTJ5RS14eGFJcTdLdGJtQyJ9.eyJpc3MiOiJodHRwczovL2Rldi00ZGt4NHVxai51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAxNjMzZThmZmNiZTIwMDZhODkyMTg1IiwiYXVkIjoiaHR0cHM6Ly9jYXBzdG9uZS8iLCJpYXQiOjE2MTIxMzU3OTAsImV4cCI6MTYxMjIyMjE5MCwiYXpwIjoiZEQzaGlZZ1d3WmhXVnBlb3lQRzlYSENtdVNjRmRkbDciLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.oEjGJXWS8PsygU4rtZQnt_Rkss56fwPHC-1T6ZPorBq_-stkdAuuw_qpQMaXMbpbGYZBTACEX6zoOFvJJie_UFiUB6jNZHWgjQOPgZS149G-FTqusLJQS_fwmYtPwKKOaoGpw8SLNRFUoh4DojLEdCAOqqaJGLDVZ8ZSsCQR4fx9JE8yLnUj0daAzcURscH2H-hRTsD4TyUFJ1qbTlggohKxk9jR3sFcB-UsAUWnTNe5dssQ7V4do3ObnrY8FGe2yI5Y9XU5fC98F7XsE9nOGJwC_qT32eu43zJGgfx0lGvsUKESpiyYQBGyXr1gfCqP5xYGtkbGi6obbhUo_e47PQ'
 ```
+
 Sample Response:
+
 ```
 {
     "success": true
@@ -169,12 +180,15 @@ Sample Response:
 
 ### GET '/movies'
 * fetches a collection of all movies in the database
+
 ```
 Sample curl request: curl --location --request GET 'https://remmy-capstone-app.herokuapp.com/movies' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFTVkY1OTJ5RS14eGFJcTdLdGJtQyJ9.eyJpc3MiOiJodHRwczovL2Rldi00ZGt4NHVxai51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAxNjMzZThmZmNiZTIwMDZhODkyMTg1IiwiYXVkIjoiaHR0cHM6Ly9jYXBzdG9uZS8iLCJpYXQiOjE2MTIxMzU3OTAsImV4cCI6MTYxMjIyMjE5MCwiYXpwIjoiZEQzaGlZZ1d3WmhXVnBlb3lQRzlYSENtdVNjRmRkbDciLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.oEjGJXWS8PsygU4rtZQnt_Rkss56fwPHC-1T6ZPorBq_-stkdAuuw_qpQMaXMbpbGYZBTACEX6zoOFvJJie_UFiUB6jNZHWgjQOPgZS149G-FTqusLJQS_fwmYtPwKKOaoGpw8SLNRFUoh4DojLEdCAOqqaJGLDVZ8ZSsCQR4fx9JE8yLnUj0daAzcURscH2H-hRTsD4TyUFJ1qbTlggohKxk9jR3sFcB-UsAUWnTNe5dssQ7V4do3ObnrY8FGe2yI5Y9XU5fC98F7XsE9nOGJwC_qT32eu43zJGgfx0lGvsUKESpiyYQBGyXr1gfCqP5xYGtkbGi6obbhUo_e47PQ' \
 --header 'Content-Type: application/json'
 ```
+
 Sample Response:
+
 ```
 {
     "movies": [
@@ -187,8 +201,10 @@ Sample Response:
     "success": true
 }
 ```
+
 ### POST '/movies'
 * create a movie in the database
+
 ```
 Sample curl request: curl --location --request POST 'https://remmy-capstone-app.herokuapp.com/movies' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFTVkY1OTJ5RS14eGFJcTdLdGJtQyJ9.eyJpc3MiOiJodHRwczovL2Rldi00ZGt4NHVxai51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAxNjMzZThmZmNiZTIwMDZhODkyMTg1IiwiYXVkIjoiaHR0cHM6Ly9jYXBzdG9uZS8iLCJpYXQiOjE2MTIxMzU3OTAsImV4cCI6MTYxMjIyMjE5MCwiYXpwIjoiZEQzaGlZZ1d3WmhXVnBlb3lQRzlYSENtdVNjRmRkbDciLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.oEjGJXWS8PsygU4rtZQnt_Rkss56fwPHC-1T6ZPorBq_-stkdAuuw_qpQMaXMbpbGYZBTACEX6zoOFvJJie_UFiUB6jNZHWgjQOPgZS149G-FTqusLJQS_fwmYtPwKKOaoGpw8SLNRFUoh4DojLEdCAOqqaJGLDVZ8ZSsCQR4fx9JE8yLnUj0daAzcURscH2H-hRTsD4TyUFJ1qbTlggohKxk9jR3sFcB-UsAUWnTNe5dssQ7V4do3ObnrY8FGe2yI5Y9XU5fC98F7XsE9nOGJwC_qT32eu43zJGgfx0lGvsUKESpiyYQBGyXr1gfCqP5xYGtkbGi6obbhUo_e47PQ' \
@@ -198,7 +214,9 @@ Sample curl request: curl --location --request POST 'https://remmy-capstone-app.
     "release_date": "january 23,2020"
 }'
 ```
+
 Sample Response:
+
 ```
 {
     "movie": {
@@ -210,9 +228,9 @@ Sample Response:
 }
 ```
 
-```
 ### PATCH '/movies/1'
 * update a movie
+
 ```
 Sample curl request: curl --location --request PATCH 'https://remmy-capstone-app.herokuapp.com/movies/1' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFTVkY1OTJ5RS14eGFJcTdLdGJtQyJ9.eyJpc3MiOiJodHRwczovL2Rldi00ZGt4NHVxai51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAxNjMzZThmZmNiZTIwMDZhODkyMTg1IiwiYXVkIjoiaHR0cHM6Ly9jYXBzdG9uZS8iLCJpYXQiOjE2MTIxMzU3OTAsImV4cCI6MTYxMjIyMjE5MCwiYXpwIjoiZEQzaGlZZ1d3WmhXVnBlb3lQRzlYSENtdVNjRmRkbDciLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.oEjGJXWS8PsygU4rtZQnt_Rkss56fwPHC-1T6ZPorBq_-stkdAuuw_qpQMaXMbpbGYZBTACEX6zoOFvJJie_UFiUB6jNZHWgjQOPgZS149G-FTqusLJQS_fwmYtPwKKOaoGpw8SLNRFUoh4DojLEdCAOqqaJGLDVZ8ZSsCQR4fx9JE8yLnUj0daAzcURscH2H-hRTsD4TyUFJ1qbTlggohKxk9jR3sFcB-UsAUWnTNe5dssQ7V4do3ObnrY8FGe2yI5Y9XU5fC98F7XsE9nOGJwC_qT32eu43zJGgfx0lGvsUKESpiyYQBGyXr1gfCqP5xYGtkbGi6obbhUo_e47PQ' \
@@ -222,7 +240,9 @@ Sample curl request: curl --location --request PATCH 'https://remmy-capstone-app
     "release_date": "january 23,2020"
 }'
 ```
+
 Sample Response:
+
 ```
 {
     "movie": {
@@ -234,14 +254,16 @@ Sample Response:
 }
 ```
 
-```
 ### Delete '/movies/1'
-* Delete a moive
+* Delete a movie
+
 ```
 curl --location --request DELETE 'https://remmy-capstone-app.herokuapp.com/movies/1' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFTVkY1OTJ5RS14eGFJcTdLdGJtQyJ9.eyJpc3MiOiJodHRwczovL2Rldi00ZGt4NHVxai51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAxNjMzZThmZmNiZTIwMDZhODkyMTg1IiwiYXVkIjoiaHR0cHM6Ly9jYXBzdG9uZS8iLCJpYXQiOjE2MTIxMzU3OTAsImV4cCI6MTYxMjIyMjE5MCwiYXpwIjoiZEQzaGlZZ1d3WmhXVnBlb3lQRzlYSENtdVNjRmRkbDciLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.oEjGJXWS8PsygU4rtZQnt_Rkss56fwPHC-1T6ZPorBq_-stkdAuuw_qpQMaXMbpbGYZBTACEX6zoOFvJJie_UFiUB6jNZHWgjQOPgZS149G-FTqusLJQS_fwmYtPwKKOaoGpw8SLNRFUoh4DojLEdCAOqqaJGLDVZ8ZSsCQR4fx9JE8yLnUj0daAzcURscH2H-hRTsD4TyUFJ1qbTlggohKxk9jR3sFcB-UsAUWnTNe5dssQ7V4do3ObnrY8FGe2yI5Y9XU5fC98F7XsE9nOGJwC_qT32eu43zJGgfx0lGvsUKESpiyYQBGyXr1gfCqP5xYGtkbGi6obbhUo_e47PQ'
 ```
+
 Sample Response:
+
 ```
 {
     "success": true
