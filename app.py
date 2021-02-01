@@ -16,6 +16,10 @@ def create_app(test_config=None):
 	db = SQLAlchemy(app)
 	Migrate(app, db)
 
+	@app.route('/')
+	def index():
+		return ("hello word")
+
 	@app.route('/actors', methods=["GET"])
 	@requires_auth('get:actors')
 	def get_actors(payload):
